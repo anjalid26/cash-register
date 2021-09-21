@@ -1,6 +1,6 @@
 const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
-const checkButton = document.querySelector("#check-btn");
+const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 
@@ -10,11 +10,13 @@ checkButton.addEventListener('click', () => {
     hideMessage();
 
     if (billAmount.value > 0) {
+        hideMessage();
+
         if (cashGiven.value >= billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
         } else {
-            showMessage("Cash given should by greater than the bill amount");
+            showMessage("Cash given should be greater than the bill amount");
         }
     } else {
         showMessage("Invalid amount");

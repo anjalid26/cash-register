@@ -1,13 +1,58 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+:root {
+    --light-purple: rgb(142, 142, 238);
+    --dark-purple: rgb(53, 53, 124);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); 
 }
 
 .container {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 50vw;
+    max-width: 45%;
+    margin: 5px;
+    padding: 15px 50px;
 }
 
 button {
-    pointer: cursor ;
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    color: white;
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+input, label, table caption {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
+
+#cash-given, #bill-amount {
+    padding: 0.5rem 1rem;
+    font-size: medium;
+}
+
+table {
+    border-spacing: 2px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid;
+    word-wrap: break-word;
+    padding: 0.2rem;
+}
+
+.table-container {
+    width: 100%;
 }
